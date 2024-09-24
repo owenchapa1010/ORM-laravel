@@ -48,7 +48,14 @@ class User extends Authenticatable
 {
 
 return $this->hasOne(Profile::class);
+ 
+}
 
+public function level()
+{
+
+return $this->belongsTo(Level::class);
+ 
 }
 
 
