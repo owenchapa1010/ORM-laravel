@@ -7,3 +7,9 @@ Route::get('/', function () {
     return view('welcome' , ["users"=>$users]);
     
 });
+Route::get('/profile/{id}', function($id){
+     $user=App\Models\User::find ($id);
+    return view('profile',[
+        'user'=>$user
+    ]);
+})->name('profile');
