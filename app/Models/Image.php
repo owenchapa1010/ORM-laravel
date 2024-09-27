@@ -5,13 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Profile extends Model
+class Image extends Model
 {
-    public function location()
-{
-
-return $this->hasOne(Location::class);
- 
-}
+        public function imageable(){
+        return $this->morphTo();
+    }
     use HasFactory;
 }
